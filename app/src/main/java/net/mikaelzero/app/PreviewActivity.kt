@@ -39,7 +39,15 @@ class PreviewActivity : AppCompatActivity() {
                 errorDrawableResId(1, R.drawable.comment)
                 mojitoListener(
                     onClick = { view, x, y, pos ->
-                        Toast.makeText(context, "tap click", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "tap click - ${pos}", Toast.LENGTH_SHORT).show()
+                    }
+
+                , beforeFinish = { pos, view ->
+                        val location = IntArray(2)
+                        val child = binding.recyclerView.getChildAt(pos+1)
+                        child?.getLocationOnScreen(location)
+
+                        view.putOriginData(location[0], location[1],child!!.width,child!!.height)
                     }
                 )
                 progressLoader {

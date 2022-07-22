@@ -151,6 +151,13 @@ public class MojitoView extends FrameLayout {
         mOriginHeight = originHeight;
     }
 
+    public void putOriginData(int left, int top, int originWidth, int originHeight) {
+        mOriginLeft = left;
+        mOriginTop = top;
+        mOriginWidth = originWidth;
+        mOriginHeight = originHeight;
+    }
+
     /**
      * 重新设置宽高  因为如果图片还未加载出来  默认宽高为全屏
      */

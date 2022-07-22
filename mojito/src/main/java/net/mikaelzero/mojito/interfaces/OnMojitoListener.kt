@@ -15,6 +15,7 @@ interface OnMojitoListener {
     fun onLongClick(fragmentActivity: FragmentActivity?, view: View, x: Float, y: Float, position: Int)
     fun onShowFinish(mojitoView: MojitoView, showImmediately: Boolean)
     fun onMojitoViewFinish(pagePosition: Int)
+    fun beforeFinish(pagePosition: Int,mojitoView: MojitoView)
     fun onDrag(view: MojitoView, moveX: Float, moveY: Float)
     fun onLongImageMove(ratio: Float)
     fun onViewPageSelected(position: Int)
